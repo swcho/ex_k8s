@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: kubian-headless
+spec:
+  clusterIP: None
+  selector:
+    app: kubia
+  ports:
+  - port: 80
+    targetPort: 8080
